@@ -5,10 +5,10 @@ import java.util.Random;
 
 public class SampleAsteroid extends FlyingObject {
     public SampleAsteroid() {
-        super(randomPosition(true),
-                randomPosition(false),
-                asteroidCorners(),
-                new Random().nextInt(0, 360),
+        super(createShape(randomPosition(true),
+                        randomPosition(false),
+                        asteroidCorners(),
+                        new Random().nextInt(0, 360)),
                 0.5,
                 Team.ASTEROID
         );

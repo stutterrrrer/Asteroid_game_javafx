@@ -19,16 +19,7 @@ public abstract class FlyingObject {
         this.team = team;
     }
 
-    public FlyingObject(int positionX, int positionY,
-                        int[][] cornerCoordinates,
-                        int angleWithXAxis, double speed, Team team) {
-        this(
-                createShape(positionX, positionY, cornerCoordinates, angleWithXAxis),
-                speed, team
-        );
-    }
-
-    private static Polygon createShape(int positionX, int positionY, int[][] cornersCoordinates, int angleWithXAxis) {
+    protected static Polygon createShape(int positionX, int positionY, int[][] cornersCoordinates, int angleWithXAxis) {
         // note that the shape created here should face positive x-axis;
         // the rotation will later be done with body.setRotate() below
 

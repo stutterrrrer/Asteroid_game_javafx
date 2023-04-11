@@ -19,9 +19,11 @@ public class PlayerShip extends FlyingObject {
     private final LocalDateTime createTime;
 
     public PlayerShip(int positionX, int positionY, int remainingLives, boolean respawn) {
-        super(positionX, positionY,
-                shipCorners(),
-                270, // points straight up
+        super(createShape(
+                        positionX, positionY,
+                        shipCorners(),
+                        270 // points straight up
+                ),
                 0, // when first created the player ship shouldn't move
                 Team.PLAYER);
         this.remainingLives = remainingLives;
